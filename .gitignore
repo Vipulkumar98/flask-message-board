@@ -6,3 +6,4 @@ instance/
 *.log
 venv/
 **/__pycache__/
+*.sqlite
