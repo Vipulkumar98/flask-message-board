@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 from flask import Flask
 
-from board import database, pages, posts
+from board import database, pages, posts, errors
 
 
 # app = Flask(__name__)
@@ -26,6 +26,7 @@ def create_app():
 
     app.register_blueprint(pages.bp)
     app.register_blueprint(posts.bp)
+    app.register_error_handler(404, errors.page_not_found)
 
     print(f"Current Environment: {os.getenv('ENVIRONMENT')}")
 

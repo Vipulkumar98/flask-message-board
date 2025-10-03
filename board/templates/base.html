@@ -12,6 +12,8 @@
     <section>
         <header>
             {% block header %}{% endblock header %}
+            <div class="flash success">Everything worked fine!</div>
+            <div class="flash error">Oh, something went wrong!</div>
         </header>
         <main>
             {% block content %}<p>No messages.</p>{% endblock content %}
