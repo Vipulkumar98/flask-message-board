@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for
+from flask import Blueprint, redirect, render_template, request, url_for, flash
 
 from board.database import get_db
 
@@ -26,8 +26,12 @@ def create():
 
             db.commit()
 
+            flash(f"Thanks for posting {author}!", category="success")
+
             return redirect(url_for("posts.posts"))
 
+        else:
+            flash("Message is required!", category="error")
     return render_template("posts/create.html")
 
 
