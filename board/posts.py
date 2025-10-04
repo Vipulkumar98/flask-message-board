@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, url_for, flash
+from flask import Blueprint, redirect, render_template, request, url_for, flash, current_app
 
 from board.database import get_db
 
@@ -25,6 +25,8 @@ def create():
             )
 
             db.commit()
+
+            current_app.logger.info(f"New post by {author}")
 
             flash(f"Thanks for posting {author}!", category="success")
 
