@@ -113,32 +113,21 @@ python -m flask run --port 8000
 ## Project Structure
 
 ```
-📦board
- ┣ 📂static
- ┃ ┗ 📜styles.css
- ┣ 📂templates
- ┃ ┣ 📂errors
- ┃ ┃ ┗ 📜404.html
- ┃ ┣ 📂pages
- ┃ ┃ ┣ 📜about.html
- ┃ ┃ ┗ 📜home.html
- ┃ ┣ 📂posts
- ┃ ┃ ┣ 📜create.html
- ┃ ┃ ┗ 📜posts.html
- ┃ ┣ 📜base.html
- ┃ ┗ 📜_navigation.html
- ┣ 📂__pycache__
- ┃ ┣ 📜database.cpython-313.pyc
- ┃ ┣ 📜errors.cpython-313.pyc
- ┃ ┣ 📜pages.cpython-313.pyc
- ┃ ┣ 📜posts.cpython-313.pyc
- ┃ ┗ 📜__init__.cpython-313.pyc
- ┣ 📜database.py
- ┣ 📜errors.py
- ┣ 📜pages.py
- ┣ 📜posts.py
- ┣ 📜schema.sql
- ┗ 📜__init__.py
+flask-message-board/
+│
+├── board/                  # Main application package
+│   ├── __init__.py        # Application factory
+│   ├── database.py        # Database connections
+│   ├── errors.py          # Error handlers
+│   ├── posts.py           # Posts blueprint
+│   ├── pages.py           # Pages blueprint
+│   ├── schema.sql         # Database schema
+│   ├── static/            # Static files (CSS)
+│   └── templates/         # Jinja2 templates
+│
+├── .env                   # Environment variables
+├── .gitignore            # Git ignore rules
+└── README.md             # This file
 ```
 
 ## Features and Roadmap
@@ -158,6 +147,7 @@ Planned Features:
 - [ ] Message search functionality
 - [ ] User profiles
 - [ ] Admin dashboard
+
 
 
 ## Contact
