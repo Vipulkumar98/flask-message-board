@@ -113,21 +113,32 @@ python -m flask run --port 8000
 ## Project Structure
 
 ```
-flask-message-board/
-│
-├── board/                  # Main application package
-│   ├── __init__.py        # Application factory
-│   ├── database.py        # Database connections
-│   ├── errors.py          # Error handlers
-│   ├── posts.py           # Posts blueprint
-│   ├── pages.py           # Pages blueprint
-│   ├── schema.sql         # Database schema
-│   ├── static/            # Static files (CSS)
-│   └── templates/         # Jinja2 templates
-│
-├── .env                   # Environment variables
-├── .gitignore            # Git ignore rules
-└── README.md             # This file
+📦board
+ ┣ 📂static
+ ┃ ┗ 📜styles.css
+ ┣ 📂templates
+ ┃ ┣ 📂errors
+ ┃ ┃ ┗ 📜404.html
+ ┃ ┣ 📂pages
+ ┃ ┃ ┣ 📜about.html
+ ┃ ┃ ┗ 📜home.html
+ ┃ ┣ 📂posts
+ ┃ ┃ ┣ 📜create.html
+ ┃ ┃ ┗ 📜posts.html
+ ┃ ┣ 📜base.html
+ ┃ ┗ 📜_navigation.html
+ ┣ 📂__pycache__
+ ┃ ┣ 📜database.cpython-313.pyc
+ ┃ ┣ 📜errors.cpython-313.pyc
+ ┃ ┣ 📜pages.cpython-313.pyc
+ ┃ ┣ 📜posts.cpython-313.pyc
+ ┃ ┗ 📜__init__.cpython-313.pyc
+ ┣ 📜database.py
+ ┣ 📜errors.py
+ ┣ 📜pages.py
+ ┣ 📜posts.py
+ ┣ 📜schema.sql
+ ┗ 📜__init__.py
 ```
 
 ## Features and Roadmap
@@ -148,19 +159,6 @@ Planned Features:
 - [ ] User profiles
 - [ ] Admin dashboard
 
-## Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
